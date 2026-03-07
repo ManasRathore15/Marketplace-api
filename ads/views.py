@@ -9,3 +9,8 @@ from rest_framework import generics
 class AdListCreateViews(generics.ListCreateAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdSeiralizer
+
+
+class AdDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Ad.objects.all()
+    serializer_class = AdSeiralizer
