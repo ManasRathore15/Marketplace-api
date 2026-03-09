@@ -6,4 +6,4 @@ class AdSeiralizer(serializers.ModelSerializer):
     class Meta:
         model = Ad
         fields = '__all__'
-        
+        read_only_fields =["owner"]
