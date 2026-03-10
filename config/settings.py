@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ads',
     'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -124,7 +125,8 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
     "DEFAULT_PAGINATION_CLASS" :"rest_framework.pagination.PageNumberPagination",
-    "PAGE_SIZE": 5
+    "PAGE_SIZE": 5,
+    "DEFAULT_FILTER_BACKENDS" : ["django_filters.rest_framework.DjangoFilterBackend"]
 }
 
 MEDIA_URL = "/media/"
