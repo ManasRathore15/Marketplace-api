@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get("postgresql://marketplace_api_db_user:zao7loT57tWG6b5gPafVDASMsagjnU4R@dpg-d6ok01jh46gs73amnsi0-a/marketplace_api_db"))
+    'default': dj_database_url.config(default=os.environ.get("DATABASE_URL"))
 }
 
 
