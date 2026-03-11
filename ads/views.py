@@ -6,6 +6,8 @@ from rest_framework.permissions import IsAuthenticated
 from .permissions import IsOwnerReadOlny
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
+from .user_serializer import UserSerializer
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -27,3 +29,8 @@ class AdDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdSeiralizer
     permission_classes = [IsAuthenticated, IsOwnerReadOlny]
+
+
+class RegisterView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
